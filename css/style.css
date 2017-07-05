@@ -1,0 +1,615 @@
+*{
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 20px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+img[alt]{
+    font-size: 0.14rem;
+}
+/*欢迎页面  hello*/
+.hello{
+    background: rgba(219, 33, 0, 0.76);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.hello .loge{
+    width: 60%;
+    margin-left: 20%;
+    padding-top: 40%;
+}
+.hello p{
+    text-align: center;
+    font-size: 0.12rem;
+    width: 100vw;
+    line-height: 0.3rem;
+}
+.hello .txt{
+    position:absolute;
+    left: 0;
+    bottom: 0.5rem;
+}
+/*-----------------------------------global 页面*/
+.global{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    font-size: 0.14rem;
+    height: 0.7rem;
+}
+.global.act{
+    display: block;
+}
+.global audio{
+    width: 100%;
+}
+/*tab  切换*/
+.tab{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index:10;
+}
+#tabcontainer{
+    padding-top: 1.1rem;
+    padding-bottom: 0.75rem;
+}
+.tab .header{
+    background: #ce3d3e;
+    width: 100%;
+    height: 0.55rem;
+}
+.tab h2{
+    font-size: 0.22rem;
+    color: #f1f1f1;
+    line-height: 0.55rem;
+    padding: 0 0.15rem;
+
+}
+.tab ul{
+    height: 0.55rem;
+    background: #fff;
+}
+.tab ul li{
+    list-style: none;
+    float: left;
+    font-size: 0.14rem;
+    width: 25%;
+    text-align: center;
+    line-height: 0.55rem;
+    border-bottom: 2px solid transparent;
+}
+.tab ul li.active{
+    border-bottom: 2px solid #ce3d3e;
+}
+/*home 页面*/
+.home{
+    padding:0;
+}
+img{
+    width: 100%;
+    display:block;
+}
+.home p{
+    font-size: 0.17rem;
+    padding:0 0.1rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    overflow: hidden;
+    /*text-overflow-ellipsis: ;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+.home p span{
+    float: right;
+}
+.songlist{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home .item{
+    width: 30%;
+    margin: 0 1.5%;
+    position: relative;
+    height: 1.55rem;
+}
+.home .item p{
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    text-align: center;
+}
+.home .item div{
+    font-size: 0.14rem;
+    width: 95%;
+    height: 0.3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    text-align: right;
+    line-height: 0.3rem;
+    background: rgba(102, 102, 102, 0.67);
+    color: #f1f1f1;
+    padding-right:5%;
+}
+.home .itemwrap{
+    display: none;
+}
+.home .itemwrap1 .item{
+    margin-left: 34.5%;
+}
+
+/*detail 页面*/
+.detail{
+    padding-bottom: 0.6rem;
+}
+#prev{
+    height:0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.18rem;
+    color: #f7f7f7;
+    font-size: 0.14rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    z-index: 100;
+}
+#prev a{
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#prev span{
+    padding:0.05rem;
+    font-size: 0.16rem;
+    font-family: Consolas;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    color: #f1f1f1;
+    display: inline-block;
+    padding-left: 0.15rem;
+}
+.detail .top{
+    height: 1.5rem;
+    position: relative;
+    background: rgba(82, 82, 82, 0.3);
+}
+.detail .top .wrap{
+    padding-top:0.75rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+.detail .top img{
+    width: 1.5rem;
+    height: 1.3rem;
+    float: left;
+}
+.detail .top img[alt]{
+    font-size: 0.14rem;
+}
+.detail .top .lay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.25);
+    -webkit-filter: blur(0.20rem);
+    filter: blur(0.2rem);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.detail .top p{
+    float: right;
+    font-size: 0.14rem;
+    padding: 0.1rem;
+    width: 1.4rem;
+    color: #efefef;
+}
+.musiclists .name{
+    padding: 0.1rem;
+    font-size:0.15rem;
+    padding-right: 0.48rem;
+}
+.musiclists .artical{
+    padding: 0.1rem;
+    font-size:0.12rem;
+}
+.musiclists li{
+    border-bottom: 1px solid #ccc;
+    list-style: decimal;
+    position: relative;
+}
+.musiclists li span{
+    position: absolute;
+    width:0.25rem;
+    height:0.25rem;
+    right: 0.2rem;
+    top: 0.23rem;
+}
+.musiclists li span.no{
+    background: url("../images/gz_red.png");
+    background-size: cover;
+}
+.musiclists li span.yes{
+    background: url("../images/gz_gray.png");
+    background-size: cover;
+}
+ol{
+    padding: 1.2rem 0.4rem;
+    font-size: 0.15rem;
+}
+/*audio-----页面*/
+.audio .top .return{
+    display: inline-block;
+    float: left;
+    padding-left: 0.28rem;
+    font-family: Consolas;
+    font-size: 0.3rem;
+    line-height: 0.65rem;
+    color: #f7f7f7;
+}
+.audio .top{
+    height: 0.68rem;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.42);
+    color: #f7f7f7;
+    background-size: cover;
+}
+.audio .top p{
+    padding-left: 0.7rem;
+}
+.audio .top p #music_name{
+    font-size: 0.15rem;
+    line-height: 0.35rem;
+}
+.audio .top p #music_artist{
+    font-size: 0.14rem;
+    line-height: 0.35rem;
+}
+.audio .pic>img{
+    width: 35%;
+    margin-left:42%;
+    margin-top:-0.1rem;
+}
+.audio .pic .rotation{
+    position: relative;
+}
+.audio .pic .rotation img:nth-of-type(1){
+    width: 74%;
+    margin-left: 14%;
+    margin-top:-0.3rem;
+}
+.audio .pic .rotation img:nth-of-type(2){
+    position: absolute;
+    width: 50%;
+    left: 26%;
+    top: 16%;
+    z-index: -1;
+}
+.audio .bot{
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.audio .bot .prev{
+    background: url("../images/prev (2).png");
+    background-size: cover;
+    z-index:8;
+}
+.audio .bot .next{
+    background: url("../images/playbar_btn_next.png");
+    background-size: cover;
+    z-index:8;
+}
+#music_state{
+    font-size: 0.14rem;
+    text-align: center;
+    margin-top: 0.1rem;
+    height: 0.2rem;
+    width: 100vw;
+    position: fixed;
+    bottom: 1.3rem;
+    left:0;
+}
+.audio{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(102, 102, 102, 0.24);
+}
+.audio .lay{
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+     -webkit-filter: blur(0.07rem);
+    -moz-filter: blur(0.07rem);
+    -ms-filter: blur(0.07rem);
+     filter: blur(0.07rem);
+    z-index: -2;
+}
+.audio .bot div{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.play{
+    background: url("../images/playbar_btn_pause.png");
+    background-size:cover;
+    z-index: 10;
+}
+.pause{
+    background: url("../images/playbar_btn_play.png");
+    background-size:cover;
+    z-index: 10;
+}
+.itemwrap1{
+    display: none;
+}
+.global .lay{
+    display:none;
+}
+.global .top a{
+    display: none;
+}
+.global .rotation img:nth-of-type(1){
+    display: none;
+}
+.global .pic img{
+   position: absolute;
+    left: 0.15rem;
+    top: 0.05rem;
+}
+.global .bot{
+    padding-top: 0;
+    margin-top: 0.12rem;
+}
+.global .audio .pic>img{
+}
+.global .audio{
+    background: #ccc;
+}
+.global .audio .prev{
+    display: none;
+}
+.global .audio .next{
+    display: none;
+}
+.global .audio #btn{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.08rem;
+}
+.global .audio #btn.play{
+    background:url("../images/pause.png");
+    background-size: cover;
+}
+.global .audio #btn.pause{
+    background:url("../images/play.png");
+    background-size: cover;
+}
+
+#global.global .pic{display: none}
+.global #music_state{
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.4rem;
+}
+.global .top p{
+    position: absolute;
+    left: 1rem;
+    top: 0.02rem;
+    color: #333;
+    padding: 0;
+}
+#global .picWrap{
+    display: none;
+}
+#global.global .picWrap{
+    display: block;
+    width: 0.58rem;
+    height: 0.58rem;
+    position: absolute;
+    left: 0.15rem;
+    top: 0.08rem;
+}
+#global.global .picWrap img{
+    width: 100%;
+    height: 100%;
+}
+/*songlist页面*/
+.songlist .quality{
+
+}
+.songlist .quality img{
+    width: 30%;
+    margin: 0.2rem;
+    float: left;
+}
+.songlist .quality p{
+    float: left;
+    margin-top: 0.2rem;
+    line-height: 0.33rem;
+}
+.songlist .quality p span:nth-of-type(1){
+    font-size: 0.18rem;
+}
+.songlist .quality p span:nth-of-type(2){
+    font-size: 0.14rem;
+}
+.songlist .quality p span:nth-of-type(3){
+    font-size: 0.12rem;
+}
+.songlist .all{
+    font-size: 0.13rem;
+    width: 0.9rem;
+    height: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.15rem;
+    line-height: 0.25rem;
+    text-align: center;
+    margin-left: 0.2rem;
+}
+.songlist .songs2{
+    width: 100vw;
+}
+.songlist .songs2 .song{
+    margin-left:30%;
+    font-size: 0.14rem;
+    width: 40%;
+    text-align: center;
+}
+.songs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.15rem;
+}
+.songs .song{
+    width: 48%;
+    margin: 0 1%;
+    position: relative;
+    height: 2.1rem;
+}
+.songs .song img{
+    height: 62%;
+}
+.songs .song p{
+    font-size: 0.14rem;
+    line-height: 0.2rem;
+    padding-top: 0.15rem;
+    padding-left: 0.05rem;
+    padding-right: 0.05rem;
+}
+.none{
+    color: #ce3d3e;
+}
+/*order区域*/
+.order>p{
+    height: 0.35rem;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+}
+.order>p .back{
+    display: inline-block;
+    width: 0.05rem;
+    height: 100%;
+    background-color:#ce3d3e;
+    vertical-align: middle;
+}
+.order>p span{
+    line-height: 0.35rem;
+    display: inline-block;
+    height: 100%;
+}
+.orderList{
+    position: relative;
+
+}
+.orderList img{
+    width: 35%;
+    float: left;
+    margin: 0.1rem;
+}
+/*like页面   显示收藏列表*/
+.like p{
+    height: 0.35rem;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+    padding-left: 0.1rem;
+}
+.like p span{
+    display: inline-block;
+    width: 0.03rem;
+    height: 100%;
+    background-color: #ce3d3e;
+    vertical-align: middle;
+}
+.like li{
+    border-bottom: 1px solid #ccc;
+    height: 0.7rem;
+    line-height: 0.35rem;
+}
+.like ol{
+    padding: 0.05rem 0.3rem;
+}
+.like li span{
+    float: right;
+    padding-right: 0.1rem;
+}
+/*order排行榜*/
+.tj{
+    font-size: 0.24rem;
+    line-height: 0.4rem;
+    padding: 2% 0 1.5% 1.5%;
+    color: #272727;
+}
+.tj span{
+    margin-left: 0.1rem;
+}
+.aei{
+    width: 0.3rem;
+    height: 0.3rem;
+    vertical-align: -7px;
+    margin-left: 0.1rem;
+}
+.rank-list{
+    display: flex;
+    flex-direction: column;
+}
+.rank-list .rank-item{
+    width: 100%;
+    display: flex;
+}
+.rank-list .rank-item .img-item{
+    width: 40%;
+    padding: 10px;
+}
+.rank-list .rank-item .img-item .img{
+    width: 1.05rem;
+}
+.rank-list .rank-item .info-item{
+    width: 1.55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 0.14rem;
+    padding-left: 0;
+}
+.rank-list .rank-item .info-item p{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
